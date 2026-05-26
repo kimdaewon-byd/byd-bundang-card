@@ -1,0 +1,63 @@
+<!doctype html>
+<html lang="ko">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>BYD Auto bundang Showroom | 김대원 주임</title>
+<meta name="theme-color" content="#111315">
+<style>
+:root{--bg:#111315;--panel:#191b1f;--line:rgba(255,255,255,.12);--text:#f3f5f7;--muted:#aeb5bf;--blue:#2446b8;--blue2:#3159e6;--gold:#c6a15b}
+*{box-sizing:border-box} body{margin:0;min-height:100vh;background:radial-gradient(circle at 80% 0%,rgba(36,70,184,.24),transparent 34%),linear-gradient(180deg,#141619,#0d0f12);color:var(--text);font-family:-apple-system,BlinkMacSystemFont,"Segoe UI","Noto Sans KR",sans-serif;letter-spacing:-.03em}
+a{color:inherit;text-decoration:none}.wrap{width:min(100%,480px);margin:0 auto;padding:28px 18px 42px}.card{position:relative;overflow:hidden;border:1px solid var(--line);border-radius:24px;background:linear-gradient(145deg,rgba(255,255,255,.06),rgba(255,255,255,.02));box-shadow:0 18px 50px rgba(0,0,0,.38);padding:26px 24px 24px}.card:after{content:"";position:absolute;left:0;right:0;bottom:0;height:7px;background:linear-gradient(90deg,#0c1d77,var(--blue2),#0c1d77)}.brand{position:absolute;top:24px;right:22px;font-size:34px;font-weight:900;color:rgba(255,255,255,.13)}.name{margin:28px 0 8px;font-size:30px;font-weight:850}.name small{font-size:14px;color:var(--muted);margin-left:6px}.role{color:var(--muted);font-size:17px;margin-bottom:8px}.info{color:#cbd1da;font-size:16px;line-height:1.65}.phone{display:block;margin-top:12px;font-size:25px;font-weight:850;letter-spacing:.02em}.actions{display:grid;grid-template-columns:1fr 1fr;gap:12px;margin:20px 0 14px}.btn{border:1px solid rgba(105,135,255,.45);border-radius:16px;background:linear-gradient(180deg,rgba(255,255,255,.09),rgba(255,255,255,.05));min-height:58px;display:flex;align-items:center;justify-content:center;gap:8px;font-size:17px;font-weight:800;color:#dce4ff}.btn.primary{grid-column:1/-1;background:linear-gradient(135deg,#1836a0,#244ad0);color:#fff}.section{margin-top:28px}.eyebrow{color:var(--gold);font-size:13px;font-weight:900;letter-spacing:.08em;margin-bottom:12px}.hero{border-radius:22px;overflow:hidden;background:#181a1f;border:1px solid var(--line);padding:18px}.car-frame{height:220px;border-radius:18px;background:radial-gradient(circle at 50% 88%,rgba(255,255,255,.12),transparent 48%),linear-gradient(135deg,#2b2f37,#111317);display:flex;align-items:center;justify-content:center;overflow:hidden}.car-frame img{max-width:108%;max-height:98%;object-fit:contain;filter:drop-shadow(0 20px 26px rgba(0,0,0,.38))}.model{margin-top:18px;font-size:28px;font-weight:900}.desc{color:var(--muted);font-size:16px;margin-top:7px;line-height:1.45}.dots{display:flex;gap:8px;justify-content:flex-end;margin-top:14px}.dot{width:8px;height:8px;border-radius:999px;background:rgba(255,255,255,.18)}.dot.active{width:34px;background:#d8dde4}.catalog{border:1px solid var(--line);border-radius:24px;padding:22px 18px 20px;background:rgba(255,255,255,.025)}.grid{display:grid;grid-template-columns:1fr 1fr;gap:12px}.catalog-btn{min-height:72px;border-radius:18px;background:linear-gradient(180deg,rgba(255,255,255,.20),rgba(255,255,255,.11));display:flex;align-items:center;justify-content:center;text-align:center;font-size:20px;font-weight:900;color:#eef2f6;border:1px solid rgba(255,255,255,.10);cursor:pointer}.map{display:block;padding:18px;border-radius:18px;background:rgba(255,255,255,.06);border:1px solid var(--line);color:#dce4ff;font-weight:800;text-align:center}.foot{text-align:center;color:rgba(255,255,255,.35);font-size:12px;margin-top:28px}@media(max-width:380px){.name{font-size:26px}.phone{font-size:22px}.catalog-btn{font-size:18px}.car-frame{height:190px}}
+</style>
+</head>
+<body>
+<main class="wrap">
+<section class="card">
+<div class="brand">BYD</div>
+<div class="name">김대원 <small>주임</small></div>
+<div class="role">Sales</div>
+<div class="info">BYD Auto bundang Showroom<br>경기 성남시 분당구 대왕판교로 322 1층<br>daewon.kim@dtnetworks.co.kr</div>
+<a class="phone" href="tel:01024620462">010 - 2462 - 0462</a>
+</section>
+<section class="actions">
+<a class="btn" href="tel:01024620462">☎ 통화하기</a>
+<a class="btn" href="contact.vcf" download>👤 연락처 저장</a>
+<button class="btn primary" onclick="window.print()">▣ 명함 이미지로 저장</button>
+</section>
+<section class="section hero">
+<div class="car-frame"><img id="carImg" src="images/dolphin.png" alt="BYD DOLPHIN"></div>
+<div class="eyebrow" style="margin-top:18px;margin-bottom:4px">BYD</div>
+<div class="model" id="modelName">DOLPHIN</div>
+<div class="desc" id="modelDesc">감각적인 디자인과 실용성을 겸비한 소형 해치백</div>
+<div class="dots" id="dots"></div>
+</section>
+<section class="section catalog">
+<div class="eyebrow">E-CATALOG</div>
+<div class="grid">
+<button class="catalog-btn" data-model="0">DOLPHIN</button>
+<button class="catalog-btn" data-model="1">ATTO 3</button>
+<button class="catalog-btn" data-model="2">SEAL</button>
+<button class="catalog-btn" data-model="3">SEALION 7</button>
+<button class="catalog-btn" data-model="4">SEALION 6</button>
+</div>
+</section>
+<section class="section"><a class="map" href="https://map.naver.com/p/search/경기 성남시 분당구 대왕판교로 322 1층" target="_blank">전시장 위치 보기</a></section>
+<div class="foot">Build Your Dreams · BYD Auto bundang Showroom</div>
+</main>
+<script>
+const models=[
+{name:"DOLPHIN",desc:"감각적인 디자인과 실용성을 겸비한 소형 해치백",img:"images/dolphin.png"},
+{name:"ATTO 3",desc:"일상과 비즈니스를 모두 만족시키는 전기 SUV",img:"images/atto3.png"},
+{name:"SEAL",desc:"퍼포먼스와 프리미엄 감성을 담은 전기 세단",img:"images/seal.png"},
+{name:"SEALION 7",desc:"도심형 전기 SUV의 새로운 기준",img:"images/sealion7.png"},
+{name:"SEALION 6",desc:"전기 주행과 장거리 효율을 함께 갖춘 PHEV SUV",img:"images/sealion6.png"}
+];
+const carImg=document.getElementById("carImg"),modelName=document.getElementById("modelName"),modelDesc=document.getElementById("modelDesc"),dots=document.getElementById("dots");
+function renderDots(active){dots.innerHTML="";models.forEach((_,i)=>{const d=document.createElement("span");d.className="dot"+(i===active?" active":"");dots.appendChild(d)})}
+function setModel(i){const m=models[i];carImg.src=m.img;carImg.alt="BYD "+m.name;modelName.textContent=m.name;modelDesc.textContent=m.desc;renderDots(i)}
+document.querySelectorAll("[data-model]").forEach(btn=>btn.addEventListener("click",()=>setModel(Number(btn.dataset.model))));
+setModel(0);
+</script>
+</body>
+</html>
