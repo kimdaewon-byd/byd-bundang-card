@@ -6,118 +6,227 @@
 <title>BYD Auto bundang Showroom | 김대원 주임</title>
 <meta name="theme-color" content="#111315">
 <style>
-:root{--bg:#111315;--panel:#191b1f;--line:rgba(255,255,255,.12);--text:#f3f5f7;--muted:#aeb5bf;--blue:#2446b8;--blue2:#3159e6;--gold:#c6a15b}
-*{box-sizing:border-box} body{margin:0;min-height:100vh;background:radial-gradient(circle at 80% 0%,rgba(36,70,184,.24),transparent 34%),radial-gradient(circle at 15% 18%,rgba(198,161,91,.08),transparent 32%),linear-gradient(180deg,#141619,#0d0f12);color:var(--text);font-family:-apple-system,BlinkMacSystemFont,"Segoe UI","Noto Sans KR",sans-serif;letter-spacing:-.03em}
-a{color:inherit;text-decoration:none} button{font-family:inherit} .wrap{width:min(100%,480px);margin:0 auto;padding:28px 18px 42px}
+:root{--bg:#101215;--panel:#191c21;--line:rgba(255,255,255,.12);--text:#f3f5f7;--muted:#aeb5bf;--blue:#2446b8;--blue2:#3159e6;--gold:#c6a15b;--light:#f3f3f3}
+*{box-sizing:border-box}
+body{margin:0;min-height:100vh;background:radial-gradient(circle at 80% 0%,rgba(36,70,184,.24),transparent 34%),linear-gradient(180deg,#141619,#0d0f12);color:var(--text);font-family:-apple-system,BlinkMacSystemFont,"Segoe UI","Noto Sans KR",sans-serif;letter-spacing:-.03em}
+a{color:inherit;text-decoration:none}
+button{font-family:inherit}
+.wrap{width:min(100%,480px);margin:0 auto;padding:28px 18px 42px}
+
 .card{position:relative;overflow:hidden;border:1px solid var(--line);border-radius:24px;background:linear-gradient(145deg,rgba(255,255,255,.06),rgba(255,255,255,.02));box-shadow:0 18px 50px rgba(0,0,0,.38);padding:26px 24px 24px}
-.card:after{content:"";position:absolute;left:0;right:0;bottom:0;height:7px;background:linear-gradient(90deg,#0c1d77,var(--blue2),#0c1d77)} .brand{position:absolute;top:24px;right:22px;font-size:34px;font-weight:900;color:rgba(255,255,255,.13)} .name{margin:28px 0 8px;font-size:30px;font-weight:850} .name small{font-size:14px;color:var(--muted);margin-left:6px} .role{color:var(--muted);font-size:17px;margin-bottom:8px} .info{color:#cbd1da;font-size:16px;line-height:1.65} .phone{display:block;margin-top:12px;font-size:25px;font-weight:850;letter-spacing:.02em}
-.actions{display:grid;grid-template-columns:1fr 1fr;gap:12px;margin:20px 0 14px} .btn{border:1px solid rgba(105,135,255,.45);border-radius:16px;background:linear-gradient(180deg,rgba(255,255,255,.09),rgba(255,255,255,.05));min-height:58px;display:flex;align-items:center;justify-content:center;gap:8px;font-size:16px;font-weight:800;color:#dce4ff} .btn.primary{grid-column:1/-1;background:linear-gradient(135deg,#1836a0,#244ad0);color:#fff}
-.section{margin-top:28px} .box{border:1px solid var(--line);border-radius:24px;background:rgba(255,255,255,.025);padding:20px 18px} .eyebrow{color:var(--gold);font-size:13px;font-weight:900;letter-spacing:.08em;margin-bottom:12px}
+.card:after{content:"";position:absolute;left:0;right:0;bottom:0;height:7px;background:linear-gradient(90deg,#0c1d77,var(--blue2),#0c1d77)}
+.brand{position:absolute;top:24px;right:22px;font-size:34px;font-weight:900;color:rgba(255,255,255,.13)}
+.name{margin:28px 0 8px;font-size:30px;font-weight:850}
+.name small{font-size:14px;color:var(--muted);margin-left:6px}
+.role{color:var(--muted);font-size:17px;margin-bottom:8px}
+.info{color:#cbd1da;font-size:16px;line-height:1.65}
+.phone{display:block;margin-top:10px;font-size:20px;font-weight:900;color:#fff}
+
+.actions{display:grid;grid-template-columns:1fr 1fr;gap:12px;margin:20px 0 14px}
+.btn{border:1px solid rgba(105,135,255,.45);border-radius:16px;background:linear-gradient(180deg,rgba(255,255,255,.09),rgba(255,255,255,.05));min-height:58px;display:flex;align-items:center;justify-content:center;gap:8px;font-size:16px;font-weight:800;color:#dce4ff}
+.btn.primary{grid-column:1/-1;background:linear-gradient(135deg,#1836a0,#244ad0);color:#fff}
+
+.section{margin-top:28px}
+.box{border:1px solid var(--line);border-radius:24px;background:rgba(255,255,255,.025);padding:20px 18px}
+.eyebrow{color:var(--gold);font-size:13px;font-weight:900;letter-spacing:.08em;margin-bottom:12px}
+
 .hero{border-radius:22px;overflow:hidden;background:#181a1f;border:1px solid var(--line);padding:0 0 18px}
-.car-frame{height:240px;border-radius:22px 22px 0 0;background:#111317;display:flex;align-items:center;justify-content:center;overflow:hidden}
-.car-frame img{width:100%;height:100%;object-fit:cover;display:block}
+.car-frame{height:250px;background:#f1f1f1;display:flex;align-items:center;justify-content:center;overflow:hidden}
+.car-frame img{width:100%;height:100%;object-fit:contain;display:block;padding:10px}
 .hero-content{padding:0 18px}
-.model{margin-top:18px;font-size:28px;font-weight:900} .desc{color:var(--muted);font-size:16px;margin-top:7px;line-height:1.45} .dots{display:flex;gap:8px;justify-content:flex-end;margin-top:14px} .dot{width:8px;height:8px;border-radius:999px;background:rgba(255,255,255,.18)} .dot.active{width:34px;background:#d8dde4}
-.grid{display:grid;grid-template-columns:1fr 1fr;gap:12px} .catalog-btn{min-height:72px;border-radius:18px;background:linear-gradient(180deg,rgba(255,255,255,.20),rgba(255,255,255,.11));display:flex;align-items:center;justify-content:center;text-align:center;font-size:19px;font-weight:900;color:#eef2f6;border:1px solid rgba(255,255,255,.10);cursor:pointer}
-.cost-title{display:flex;align-items:center;justify-content:space-between;gap:10px;margin-bottom:12px} .cost-title h2{margin:0;font-size:18px} .cost-title small{color:var(--muted);font-size:11px;text-align:right} table{width:100%;border-collapse:collapse;overflow:hidden;border-radius:14px;font-size:12px} th{background:#102845;color:#fff;font-weight:800;padding:10px 6px} td{padding:9px 6px;border-bottom:1px solid rgba(255,255,255,.07);color:#d6dce5;text-align:center} td:first-child{text-align:left;color:#fff;font-weight:700} tr:last-child td{border-bottom:0} .saving{margin-top:12px;border-radius:16px;background:#1739b6;padding:13px;text-align:center;font-size:14px;font-weight:900} .saving b{font-size:22px;color:#fff}
-.formula{margin-top:18px;border-radius:20px;background:rgba(0,130,200,.18);border:1px solid rgba(80,190,255,.24);padding:16px} .formula-title{font-size:17px;font-weight:900;margin-bottom:10px;color:#dceeff} .input-grid{display:grid;grid-template-columns:1fr 1fr;gap:9px} .input-grid input{width:100%;background:rgba(255,255,255,.08);border:1px solid rgba(255,255,255,.16);border-radius:10px;padding:10px;color:#fff} .formula button{margin-top:10px;width:100%;border:0;border-radius:12px;background:#244ad0;color:#fff;font-weight:900;padding:12px} .result{margin-top:10px;color:#fff;font-weight:800;text-align:center}
-.contact-grid{display:grid;grid-template-columns:repeat(4,1fr);gap:10px} .contact-btn,.map-btn{min-height:64px;border-radius:16px;background:rgba(255,255,255,.10);border:1px solid rgba(255,255,255,.12);display:flex;flex-direction:column;align-items:center;justify-content:center;gap:5px;font-weight:850;font-size:12px;color:#f0f3f7} .icon{font-size:22px} .address-card{border-radius:16px;background:rgba(255,255,255,.06);border:1px solid var(--line);padding:14px;margin-bottom:12px;line-height:1.5;color:#d5dbe3} .map-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:10px} .map-btn.t{background:rgba(45,94,230,.25)} .map-btn.k{background:rgba(239,190,40,.22)} .map-btn.n{background:rgba(30,170,70,.22)} .foot{text-align:center;color:rgba(255,255,255,.35);font-size:12px;margin-top:28px}
-@media(max-width:380px){.name{font-size:26px}.phone{font-size:22px}.catalog-btn{font-size:17px}.car-frame{height:215px}.contact-grid{grid-template-columns:repeat(2,1fr)}}
+.model{margin-top:18px;font-size:28px;font-weight:900}
+.desc{color:var(--muted);font-size:16px;margin-top:7px;line-height:1.45}
+.dots{display:flex;gap:8px;justify-content:flex-end;margin-top:14px}
+.dot{width:8px;height:8px;border-radius:999px;background:rgba(255,255,255,.18)}
+.dot.active{width:34px;background:#d8dde4}
+
+.grid{display:grid;grid-template-columns:1fr 1fr;gap:12px}
+.catalog-btn{min-height:72px;border-radius:18px;background:linear-gradient(180deg,rgba(255,255,255,.20),rgba(255,255,255,.11));display:flex;align-items:center;justify-content:center;text-align:center;font-size:19px;font-weight:900;color:#eef2f6;border:1px solid rgba(255,255,255,.10);cursor:pointer}
+.catalog-btn.wide{grid-column:1/-1}
+
+.blog-link{display:block;border-radius:20px;background:linear-gradient(135deg,rgba(255,255,255,.14),rgba(255,255,255,.06));border:1px solid rgba(255,255,255,.12);padding:18px}
+.blog-title{display:block;font-size:18px;font-weight:900;color:#fff}
+.blog-desc{display:block;margin-top:6px;color:var(--muted);font-size:14px;line-height:1.45}
+
+.cost-title{display:flex;align-items:center;justify-content:space-between;gap:10px;margin-bottom:12px}
+.cost-title h2{margin:0;font-size:18px}
+.cost-title small{color:var(--muted);font-size:11px;text-align:right}
+table{width:100%;border-collapse:collapse;overflow:hidden;border-radius:14px;font-size:12px}
+th{background:#102845;color:#fff;font-weight:800;padding:10px 6px}
+td{padding:9px 6px;border-bottom:1px solid rgba(255,255,255,.07);color:#d6dce5;text-align:center}
+td:first-child{text-align:left;padding-left:10px}
+.saving{margin-top:14px;border-radius:18px;background:linear-gradient(180deg,#10327c,#1f4ac3);padding:18px 14px;text-align:center;font-size:16px;font-weight:700}
+.saving b{display:block;margin-top:4px;font-size:28px}
+
+.formula{margin-top:18px;border-radius:20px;background:rgba(0,130,200,.18);border:1px solid rgba(80,190,255,.24);padding:16px}
+.formula-title{font-size:17px;font-weight:900;margin-bottom:10px;color:#dceeff}
+.input-grid{display:grid;grid-template-columns:1fr 1fr;gap:9px}
+.input-grid input{width:100%;background:rgba(255,255,255,.08);border:1px solid rgba(255,255,255,.16);border-radius:10px;padding:10px;color:#fff}
+.formula button{margin-top:10px;width:100%;border:0;border-radius:12px;background:#2c57e6;color:#fff;padding:12px 14px;font-weight:900}
+.result{margin-top:10px;font-size:14px;color:#eef4ff;text-align:center}
+
+.contact-grid{display:grid;grid-template-columns:repeat(4,1fr);gap:10px}
+.contact-btn,.map-btn{min-height:64px;border-radius:16px;background:rgba(255,255,255,.10);border:1px solid rgba(255,255,255,.12);display:flex;flex-direction:column;align-items:center;justify-content:center;gap:5px;font-weight:850;font-size:12px;color:#f0f3f7}
+.icon{font-size:22px}
+.address-card{border-radius:16px;background:rgba(255,255,255,.06);border:1px solid var(--line);padding:14px;margin-bottom:12px;line-height:1.5;color:#dce2ea}
+.map-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:10px}
+.map-btn.t{background:#4054d5}
+.map-btn.k{background:#f5d44b;color:#2d2800}
+.map-btn.n{background:#16c460}
+.foot{text-align:center;color:#7e8794;font-size:12px;letter-spacing:.22em;margin-top:28px;padding-bottom:20px}
+
+@media(max-width:380px){
+  .name{font-size:26px}
+  .phone{font-size:22px}
+  .catalog-btn{font-size:17px}
+  .car-frame{height:225px}
+  .contact-grid{grid-template-columns:repeat(2,1fr)}
+}
 </style>
 </head>
 <body>
 <main class="wrap">
 <section class="card">
-<div class="brand">BYD</div>
-<div class="name">김대원 <small>주임</small></div>
-<div class="role">Sales</div>
-<div class="info">BYD Auto bundang Showroom<br>경기 성남시 분당구 대왕판교로 322 1층<br>daewon.kim@dtnetworks.co.kr</div>
-<a class="phone" href="tel:01024620462">010 - 2462 - 0462</a>
+  <div class="brand">BYD</div>
+  <div class="name">김대원 <small>주임</small></div>
+  <div class="role">Sales</div>
+  <div class="info">BYD Auto bundang Showroom<br>경기 성남시 분당구 대왕판교로 322 1층<br>daewon.kim@dtnetworks.co.kr</div>
+  <a class="phone" href="tel:01024620462">010 - 2462 - 0462</a>
 </section>
+
 <section class="actions">
-<a class="btn" href="tel:01024620462">☎ 통화하기</a>
-<a class="btn" href="contact.vcf" download>👤 연락처 저장</a>
-<button class="btn primary" onclick="window.print()">▣ 명함 이미지로 저장</button>
+  <a class="btn" href="tel:01024620462">☎ 통화하기</a>
+  <a class="btn" href="contact.vcf" download>👤 연락처 저장</a>
+  <button class="btn primary" onclick="window.print()">▣ 명함 이미지로 저장</button>
 </section>
+
 <section class="section hero">
-<div class="car-frame"><img id="carImg" src="images/dolphin.jpg?v=photo2" alt="BYD DOLPHIN"></div>
-<div class="hero-content">
-<div class="eyebrow" style="margin-top:18px;margin-bottom:4px">BYD</div>
-<div class="model" id="modelName">DOLPHIN</div>
-<div class="desc" id="modelDesc">감각적인 디자인과 실용성을 겸비한 소형 해치백</div>
-<div class="dots" id="dots"></div>
-</div>
+  <div class="car-frame"><img id="carImg" src="images/dolphin.png?v=user6" alt="BYD DOLPHIN"></div>
+  <div class="hero-content">
+    <div class="eyebrow" style="margin-top:18px;margin-bottom:4px">BYD</div>
+    <div class="model" id="modelName">DOLPHIN</div>
+    <div class="desc" id="modelDesc">감각적인 디자인과 실용성을 겸비한 소형 해치백</div>
+    <div class="dots" id="dots"></div>
+  </div>
 </section>
+
 <section class="section box">
-<div class="eyebrow">E-CATALOG</div>
-<div class="grid">
-<button class="catalog-btn" data-model="0">DOLPHIN</button>
-<button class="catalog-btn" data-model="1">ATTO 3</button>
-<button class="catalog-btn" data-model="2">SEAL</button>
-<button class="catalog-btn" data-model="3">SEALION 7</button>
-<button class="catalog-btn" data-model="4">SEALION 6</button>
-<a class="catalog-btn" href="https://blog.naver.com/daengdaeng67" target="_blank">BLOG</a>
-</div>
+  <div class="eyebrow">VEHICLE LINEUP</div>
+  <div class="grid">
+    <button class="catalog-btn" data-model="0">DOLPHIN</button>
+    <button class="catalog-btn" data-model="1">ATTO 3</button>
+    <button class="catalog-btn" data-model="2">SEAL</button>
+    <button class="catalog-btn" data-model="3">SEALION 7</button>
+    <button class="catalog-btn wide" data-model="4">SEALION 6</button>
+  </div>
 </section>
+
 <section class="section box">
-<div class="cost-title"><h2>하이브리드와 EV 유지 관리비 비교</h2><small>연 25,000km 주행 기준</small></div>
-<table>
-<thead><tr><th>비교항목</th><th>하이브리드</th><th>EV</th></tr></thead>
-<tbody>
-<tr><td>연간 자동차세</td><td>약 290,000원</td><td>약 130,000원</td></tr>
-<tr><td>연료/충전비</td><td>약 3,900,000원</td><td>약 1,500,000원</td></tr>
-<tr><td>소모품 교체비</td><td>약 450,000원</td><td>약 30,000원</td></tr>
-<tr><td>취득세 지원</td><td>해당없음</td><td>-1,400,000원</td></tr>
-<tr><td>공영주차장</td><td>해당없음</td><td>50% 할인</td></tr>
-<tr><td>고속도로 통행료</td><td>해당없음</td><td>30% 할인</td></tr>
-</tbody>
-</table>
-<div class="saving">5년 보유 시 총 절감 예상액<br><b>약 14,900,000원 + α</b></div>
-<div class="formula">
-<div class="formula-title">🔢 전기차 전환 비용 계산기</div>
-<div class="input-grid">
-<input id="km" type="number" placeholder="연 주행거리 km" value="25000">
-<input id="fuel" type="number" placeholder="휘발유/L" value="2000">
-<input id="eff" type="number" placeholder="연비 km/L" value="17">
-<input id="elec" type="number" placeholder="전기요금/kWh" value="350">
-</div>
-<button onclick="calcCost()">유지비 절감액 확인</button>
-<div class="result" id="calcResult"></div>
-</div>
+  <div class="eyebrow">BLOG</div>
+  <a class="blog-link" href="https://blog.naver.com/daengdaeng67" target="_blank">
+    <span class="blog-title">김대원 주임 BYD 상담 블로그</span>
+    <span class="blog-desc">차량 정보, 상담 안내, 전시장 소식을 확인하실 수 있습니다.</span>
+  </a>
 </section>
+
 <section class="section box">
-<div class="eyebrow">CONTACT US</div>
-<div class="contact-grid">
-<a class="contact-btn" href="tel:01024620462"><span class="icon">☎</span>전화상담</a>
-<a class="contact-btn" href="sms:01024620462"><span class="icon">💬</span>문자상담</a>
-<a class="contact-btn" href="mailto:daewon.kim@dtnetworks.co.kr"><span class="icon">✉️</span>이메일</a>
-<a class="contact-btn" href="https://blog.naver.com/daengdaeng67" target="_blank"><span class="icon">🔗</span>블로그</a>
-</div>
+  <div class="cost-title">
+    <h2>하이브리드와 EV 유지 관리비 비교</h2>
+    <small>연 25,000km 주행 기준</small>
+  </div>
+  <table>
+    <thead><tr><th>비교항목</th><th>하이브리드</th><th>EV</th></tr></thead>
+    <tbody>
+      <tr><td>연간 자동차세</td><td>약 290,000원</td><td>약 130,000원</td></tr>
+      <tr><td>연료/충전비</td><td>약 3,900,000원</td><td>약 1,500,000원</td></tr>
+      <tr><td>소모품 교체비</td><td>약 450,000원</td><td>약 30,000원</td></tr>
+      <tr><td>취득세 지원</td><td>해당없음</td><td>-1,400,000원</td></tr>
+      <tr><td>공영주차장</td><td>해당없음</td><td>50% 할인</td></tr>
+      <tr><td>고속도로 통행료</td><td>해당없음</td><td>30% 할인</td></tr>
+    </tbody>
+  </table>
+  <div class="saving">5년 보유 시 총 절감 예상액<br><b>약 14,900,000원 + α</b></div>
+  <div class="formula">
+    <div class="formula-title">🔢 전기차 전환 비용 계산기</div>
+    <div class="input-grid">
+      <input id="km" type="number" placeholder="연 주행거리 km" value="25000">
+      <input id="fuel" type="number" placeholder="휘발유/L" value="2000">
+      <input id="eff" type="number" placeholder="연비 km/L" value="17">
+      <input id="elec" type="number" placeholder="전기요금/kWh" value="350">
+    </div>
+    <button onclick="calcCost()">유지비 절감액 확인</button>
+    <div class="result" id="calcResult"></div>
+  </div>
 </section>
+
 <section class="section box">
-<div class="eyebrow">SHOWROOM LOCATION</div>
-<div class="address-card">📍 BYD Auto bundang Showroom<br>경기 성남시 분당구 대왕판교로 322 1층</div>
-<div class="map-grid">
-<a class="map-btn t" href="tmap://search?name=BYD%20Auto%20bundang%20Showroom%20%EA%B2%BD%EA%B8%B0%20%EC%84%B1%EB%82%A8%EC%8B%9C%20%EB%B6%84%EB%8B%B9%EA%B5%AC%20%EB%8C%80%EC%99%95%ED%8C%90%EA%B5%90%EB%A1%9C%20322%201%EC%B8%B5"><span class="icon">T</span>티맵</a>
-<a class="map-btn k" href="https://map.kakao.com/?q=BYD%20Auto%20bundang%20Showroom%20%EA%B2%BD%EA%B8%B0%20%EC%84%B1%EB%82%A8%EC%8B%9C%20%EB%B6%84%EB%8B%B9%EA%B5%AC%20%EB%8C%80%EC%99%95%ED%8C%90%EA%B5%90%EB%A1%9C%20322%201%EC%B8%B5" target="_blank"><span class="icon">K</span>카카오맵</a>
-<a class="map-btn n" href="https://map.naver.com/p/search/BYD%20Auto%20bundang%20Showroom%20%EA%B2%BD%EA%B8%B0%20%EC%84%B1%EB%82%A8%EC%8B%9C%20%EB%B6%84%EB%8B%B9%EA%B5%AC%20%EB%8C%80%EC%99%95%ED%8C%90%EA%B5%90%EB%A1%9C%20322%201%EC%B8%B5" target="_blank"><span class="icon">N</span>네이버맵</a>
-</div>
+  <div class="eyebrow">CONTACT US</div>
+  <div class="contact-grid">
+    <a class="contact-btn" href="tel:01024620462"><span class="icon">☎</span>전화상담</a>
+    <a class="contact-btn" href="sms:01024620462"><span class="icon">💬</span>문자상담</a>
+    <a class="contact-btn" href="mailto:daewon.kim@dtnetworks.co.kr"><span class="icon">✉️</span>이메일</a>
+    <a class="contact-btn" href="https://blog.naver.com/daengdaeng67" target="_blank"><span class="icon">🔗</span>블로그</a>
+  </div>
 </section>
+
+<section class="section box">
+  <div class="eyebrow">SHOWROOM LOCATION</div>
+  <div class="address-card">📍 BYD Auto bundang Showroom<br>경기 성남시 분당구 대왕판교로 322 1층</div>
+  <div class="map-grid">
+    <a class="map-btn t" href="tmap://search?name=BYD%20Auto%20bundang%20Showroom%20%EA%B2%BD%EA%B8%B0%20%EC%84%B1%EB%82%A8%EC%8B%9C%20%EB%B6%84%EB%8B%B9%EA%B5%AC%20%EB%8C%80%EC%99%95%ED%8C%90%EA%B5%90%EB%A1%9C%20322%201%EC%B8%B5"><span class="icon">T</span>티맵</a>
+    <a class="map-btn k" href="https://map.kakao.com/?q=BYD%20Auto%20bundang%20Showroom%20%EA%B2%BD%EA%B8%B0%20%EC%84%B1%EB%82%A8%EC%8B%9C%20%EB%B6%84%EB%8B%B9%EA%B5%AC%20%EB%8C%80%EC%99%95%ED%8C%90%EA%B5%90%EB%A1%9C%20322%201%EC%B8%B5" target="_blank"><span class="icon">K</span>카카오맵</a>
+    <a class="map-btn n" href="https://map.naver.com/p/search/BYD%20Auto%20bundang%20Showroom%20%EA%B2%BD%EA%B8%B0%20%EC%84%B1%EB%82%A8%EC%8B%9C%20%EB%B6%84%EB%8B%B9%EA%B5%AC%20%EB%8C%80%EC%99%95%ED%8C%90%EA%B5%90%EB%A1%9C%20322%201%EC%B8%B5" target="_blank"><span class="icon">N</span>네이버맵</a>
+  </div>
+</section>
+
 <div class="foot">BYD · DT NETWORKS · BUNDANG</div>
 </main>
+
 <script>
-const models=[
-{name:"DOLPHIN",desc:"감각적인 디자인과 실용성을 겸비한 소형 해치백",img:"images/dolphin.jpg?v=photo2"},
-{name:"ATTO 3",desc:"일상과 비즈니스를 모두 만족시키는 전기 SUV",img:"images/atto3.jpg?v=photo2"},
-{name:"SEAL",desc:"퍼포먼스와 프리미엄 감성을 담은 전기 세단",img:"images/seal.jpg?v=photo2"},
-{name:"SEALION 7",desc:"도심형 전기 SUV의 새로운 기준",img:"images/sealion7.jpg?v=photo2"},
-{name:"SEALION 6",desc:"전기 주행과 장거리 효율을 함께 갖춘 PHEV SUV",img:"images/sealion6.jpg?v=photo2"}
+const models = [
+  {name:"DOLPHIN", desc:"감각적인 디자인과 실용성을 겸비한 소형 해치백", img:"images/dolphin.png?v=user6"},
+  {name:"ATTO 3", desc:"일상과 비즈니스를 모두 만족시키는 전기 SUV", img:"images/atto3.png?v=user6"},
+  {name:"SEAL", desc:"퍼포먼스와 프리미엄 감성을 담은 전기 세단", img:"images/seal.png?v=user6"},
+  {name:"SEALION 7", desc:"도심형 전기 SUV의 새로운 기준", img:"images/sealion7.png?v=user6"},
+  {name:"SEALION 6", desc:"전기 주행과 장거리 효율을 함께 갖춘 PHEV SUV", img:"images/sealion6.png?v=user6"}
 ];
-const carImg=document.getElementById("carImg"),modelName=document.getElementById("modelName"),modelDesc=document.getElementById("modelDesc"),dots=document.getElementById("dots");
-function renderDots(active){dots.innerHTML="";models.forEach((_,i)=>{const d=document.createElement("span");d.className="dot"+(i===active?" active":"");dots.appendChild(d)})}
-function setModel(i){const m=models[i];carImg.src=m.img;carImg.alt="BYD "+m.name;modelName.textContent=m.name;modelDesc.textContent=m.desc;renderDots(i)}
-document.querySelectorAll("[data-model]").forEach(btn=>btn.addEventListener("click",()=>setModel(Number(btn.dataset.model))));
-function calcCost(){const km=Number(document.getElementById("km").value||0);const fuel=Number(document.getElementById("fuel").value||0);const eff=Number(document.getElementById("eff").value||1);const elec=Number(document.getElementById("elec").value||0);const hybrid=km/eff*fuel;const ev=km/5.5*elec;const save=Math.max(0,hybrid-ev);document.getElementById("calcResult").textContent="연간 예상 절감액 약 "+Math.round(save).toLocaleString()+"원";}
+
+const carImg = document.getElementById("carImg");
+const modelName = document.getElementById("modelName");
+const modelDesc = document.getElementById("modelDesc");
+const dots = document.getElementById("dots");
+
+function renderDots(active){
+  dots.innerHTML = "";
+  models.forEach((_, i) => {
+    const d = document.createElement("span");
+    d.className = "dot" + (i === active ? " active" : "");
+    dots.appendChild(d);
+  });
+}
+
+function setModel(i){
+  const m = models[i];
+  carImg.src = m.img;
+  carImg.alt = "BYD " + m.name;
+  modelName.textContent = m.name;
+  modelDesc.textContent = m.desc;
+  renderDots(i);
+}
+
+document.querySelectorAll("[data-model]").forEach(btn => btn.addEventListener("click", () => setModel(Number(btn.dataset.model))));
+
+function calcCost(){
+  const km = Number(document.getElementById("km").value || 0);
+  const fuel = Number(document.getElementById("fuel").value || 0);
+  const eff = Number(document.getElementById("eff").value || 1);
+  const elec = Number(document.getElementById("elec").value || 0);
+  const hybrid = km / eff * fuel;
+  const ev = km / 5.5 * elec;
+  const save = Math.max(0, hybrid - ev);
+  document.getElementById("calcResult").textContent = "연간 예상 절감액 약 " + Math.round(save).toLocaleString() + "원";
+}
+
 setModel(0);
 </script>
 </body>
