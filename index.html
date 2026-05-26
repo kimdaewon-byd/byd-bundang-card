@@ -6,11 +6,10 @@
 <title>BYD Auto bundang Showroom | 김대원 주임</title>
 <meta name="theme-color" content="#111315">
 <style>
-:root{--bg:#101215;--panel:#191c21;--line:rgba(255,255,255,.12);--text:#f3f5f7;--muted:#aeb5bf;--blue:#2446b8;--blue2:#3159e6;--gold:#c6a15b;--light:#f3f3f3}
+:root{--bg:#101215;--panel:#191c21;--line:rgba(255,255,255,.12);--text:#f3f5f7;--muted:#aeb5bf;--blue:#2446b8;--blue2:#3159e6;--gold:#c6a15b;--light:#f3f3f3;--kakao:#FEE500;--kakao-text:#271800}
 *{box-sizing:border-box}
 body{margin:0;min-height:100vh;background:radial-gradient(circle at 80% 0%,rgba(36,70,184,.24),transparent 34%),linear-gradient(180deg,#141619,#0d0f12);color:var(--text);font-family:-apple-system,BlinkMacSystemFont,"Segoe UI","Noto Sans KR",sans-serif;letter-spacing:-.03em}
-a{color:inherit;text-decoration:none}
-button{font-family:inherit}
+a{color:inherit;text-decoration:none} button, select, input{font-family:inherit}
 .wrap{width:min(100%,480px);margin:0 auto;padding:28px 18px 42px}
 
 .card{position:relative;overflow:hidden;border:1px solid var(--line);border-radius:24px;background:linear-gradient(145deg,rgba(255,255,255,.06),rgba(255,255,255,.02));box-shadow:0 18px 50px rgba(0,0,0,.38);padding:26px 24px 24px}
@@ -23,7 +22,7 @@ button{font-family:inherit}
 .phone{display:block;margin-top:10px;font-size:20px;font-weight:900;color:#fff}
 
 .actions{display:grid;grid-template-columns:1fr 1fr;gap:12px;margin:20px 0 14px}
-.btn{border:1px solid rgba(105,135,255,.45);border-radius:16px;background:linear-gradient(180deg,rgba(255,255,255,.09),rgba(255,255,255,.05));min-height:58px;display:flex;align-items:center;justify-content:center;gap:8px;font-size:16px;font-weight:800;color:#dce4ff}
+.btn{border:1px solid rgba(105,135,255,.45);border-radius:16px;background:linear-gradient(180deg,rgba(255,255,255,.09),rgba(255,255,255,.05));min-height:58px;display:flex;align-items:center;justify-content:center;gap:8px;font-size:16px;font-weight:800;color:#dce4ff;padding:0 10px}
 .btn.primary{grid-column:1/-1;background:linear-gradient(135deg,#1836a0,#244ad0);color:#fff}
 
 .section{margin-top:28px}
@@ -44,9 +43,13 @@ button{font-family:inherit}
 .catalog-btn{min-height:72px;border-radius:18px;background:linear-gradient(180deg,rgba(255,255,255,.20),rgba(255,255,255,.11));display:flex;align-items:center;justify-content:center;text-align:center;font-size:19px;font-weight:900;color:#eef2f6;border:1px solid rgba(255,255,255,.10);cursor:pointer}
 .catalog-btn.wide{grid-column:1/-1}
 
-.blog-link{display:block;border-radius:20px;background:linear-gradient(135deg,rgba(255,255,255,.14),rgba(255,255,255,.06));border:1px solid rgba(255,255,255,.12);padding:18px}
+.blog-stack{display:grid;gap:12px}
+.blog-link,.kakao-link{display:block;border-radius:20px;background:linear-gradient(135deg,rgba(255,255,255,.14),rgba(255,255,255,.06));border:1px solid rgba(255,255,255,.12);padding:18px}
 .blog-title{display:block;font-size:18px;font-weight:900;color:#fff}
 .blog-desc{display:block;margin-top:6px;color:var(--muted);font-size:14px;line-height:1.45}
+.kakao-link{background:linear-gradient(180deg,#FFF176,#FEE500); color:var(--kakao-text); border-color:rgba(0,0,0,.05)}
+.kakao-title{display:block;font-size:18px;font-weight:900}
+.kakao-desc{display:block;margin-top:6px;font-size:14px;opacity:.82}
 
 .cost-title{display:flex;align-items:center;justify-content:space-between;gap:10px;margin-bottom:12px}
 .cost-title h2{margin:0;font-size:18px}
@@ -55,15 +58,24 @@ table{width:100%;border-collapse:collapse;overflow:hidden;border-radius:14px;fon
 th{background:#102845;color:#fff;font-weight:800;padding:10px 6px}
 td{padding:9px 6px;border-bottom:1px solid rgba(255,255,255,.07);color:#d6dce5;text-align:center}
 td:first-child{text-align:left;padding-left:10px}
+.note{margin-top:10px;color:#9fa7b2;font-size:12px;text-align:center}
 .saving{margin-top:14px;border-radius:18px;background:linear-gradient(180deg,#10327c,#1f4ac3);padding:18px 14px;text-align:center;font-size:16px;font-weight:700}
 .saving b{display:block;margin-top:4px;font-size:28px}
 
-.formula{margin-top:18px;border-radius:20px;background:rgba(0,130,200,.18);border:1px solid rgba(80,190,255,.24);padding:16px}
-.formula-title{font-size:17px;font-weight:900;margin-bottom:10px;color:#dceeff}
-.input-grid{display:grid;grid-template-columns:1fr 1fr;gap:9px}
-.input-grid input{width:100%;background:rgba(255,255,255,.08);border:1px solid rgba(255,255,255,.16);border-radius:10px;padding:10px;color:#fff}
-.formula button{margin-top:10px;width:100%;border:0;border-radius:12px;background:#2c57e6;color:#fff;padding:12px 14px;font-weight:900}
-.result{margin-top:10px;font-size:14px;color:#eef4ff;text-align:center}
+.calc-card{margin-top:18px;border-radius:22px;border:1px solid rgba(80,190,255,.24);overflow:hidden;background:rgba(255,255,255,.02)}
+.calc-head{background:#125c94;padding:18px 16px;font-size:17px;font-weight:900;color:#fff}
+.calc-body{padding:18px 16px 16px}
+.calc-intro{color:#c7d0db;font-size:14px;line-height:1.6;margin-bottom:16px}
+.form-grid{display:grid;grid-template-columns:1fr 1fr;gap:12px}
+.field label{display:block;font-size:14px;font-weight:800;color:#edf2f7;margin-bottom:8px}
+.field input,.field select{width:100%;background:#2b2d31;border:1px solid rgba(255,255,255,.12);border-radius:14px;padding:14px 14px;color:#fff;font-size:15px}
+.field.full{grid-column:1/-1}
+.periods{display:grid;grid-template-columns:repeat(3,1fr);gap:12px}
+.period-btn{border:none;border-radius:16px;background:#4a4a4a;color:#fff;padding:16px 10px;font-size:18px;font-weight:900;cursor:pointer}
+.period-btn.active{background:#2340b7; box-shadow:inset 0 0 0 2px rgba(255,255,255,.08)}
+.calc-submit{margin-top:14px;width:100%;border:0;border-radius:16px;background:#2340b7;color:#fff;padding:16px 14px;font-weight:900;font-size:17px}
+.calc-result{margin-top:14px;border-radius:18px;background:rgba(36,70,184,.18);padding:14px;text-align:center;color:#eef4ff;font-size:14px;line-height:1.6}
+.calc-result b{font-size:22px;display:block;margin-top:6px}
 
 .contact-grid{display:grid;grid-template-columns:repeat(4,1fr);gap:10px}
 .contact-btn,.map-btn{min-height:64px;border-radius:16px;background:rgba(255,255,255,.10);border:1px solid rgba(255,255,255,.12);display:flex;flex-direction:column;align-items:center;justify-content:center;gap:5px;font-weight:850;font-size:12px;color:#f0f3f7}
@@ -81,6 +93,7 @@ td:first-child{text-align:left;padding-left:10px}
   .catalog-btn{font-size:17px}
   .car-frame{height:225px}
   .contact-grid{grid-template-columns:repeat(2,1fr)}
+  .form-grid{grid-template-columns:1fr}
 }
 </style>
 </head>
@@ -101,7 +114,7 @@ td:first-child{text-align:left;padding-left:10px}
 </section>
 
 <section class="section hero">
-  <div class="car-frame"><img id="carImg" src="images/dolphin.png?v=user6" alt="BYD DOLPHIN"></div>
+  <div class="car-frame"><img id="carImg" src="images/dolphin.png?v=final7" alt="BYD DOLPHIN"></div>
   <div class="hero-content">
     <div class="eyebrow" style="margin-top:18px;margin-bottom:4px">BYD</div>
     <div class="model" id="modelName">DOLPHIN</div>
@@ -122,11 +135,17 @@ td:first-child{text-align:left;padding-left:10px}
 </section>
 
 <section class="section box">
-  <div class="eyebrow">BLOG</div>
-  <a class="blog-link" href="https://blog.naver.com/daengdaeng67" target="_blank">
-    <span class="blog-title">김대원 주임 BYD 상담 블로그</span>
-    <span class="blog-desc">차량 정보, 상담 안내, 전시장 소식을 확인하실 수 있습니다.</span>
-  </a>
+  <div class="eyebrow">BLOG & CHAT</div>
+  <div class="blog-stack">
+    <a class="blog-link" href="https://blog.naver.com/daengdaeng67" target="_blank">
+      <span class="blog-title">김대원 주임 BYD 상담 블로그</span>
+      <span class="blog-desc">차량 정보, 상담 안내, 전시장 소식을 확인하실 수 있습니다.</span>
+    </a>
+    <a class="kakao-link" href="https://open.kakao.com/o/stsmrjoi" target="_blank">
+      <span class="kakao-title">카카오톡 오픈채팅 바로가기</span>
+      <span class="kakao-desc">빠르게 상담 문의를 남기실 수 있습니다.</span>
+    </a>
+  </div>
 </section>
 
 <section class="section box">
@@ -141,21 +160,58 @@ td:first-child{text-align:left;padding-left:10px}
       <tr><td>연료/충전비</td><td>약 3,900,000원</td><td>약 1,500,000원</td></tr>
       <tr><td>소모품 교체비</td><td>약 450,000원</td><td>약 30,000원</td></tr>
       <tr><td>취득세 지원</td><td>해당없음</td><td>-1,400,000원</td></tr>
-      <tr><td>공영주차장</td><td>해당없음</td><td>50% 할인</td></tr>
-      <tr><td>고속도로 통행료</td><td>해당없음</td><td>30% 할인</td></tr>
+      <tr><td>공영주차장</td><td>혜택없음</td><td>50% 할인</td></tr>
+      <tr><td>고속도로 통행료</td><td>혜택없음</td><td>30% 할인</td></tr>
     </tbody>
   </table>
   <div class="saving">5년 보유 시 총 절감 예상액<br><b>약 14,900,000원 + α</b></div>
-  <div class="formula">
-    <div class="formula-title">🔢 전기차 전환 비용 계산기</div>
-    <div class="input-grid">
-      <input id="km" type="number" placeholder="연 주행거리 km" value="25000">
-      <input id="fuel" type="number" placeholder="휘발유/L" value="2000">
-      <input id="eff" type="number" placeholder="연비 km/L" value="17">
-      <input id="elec" type="number" placeholder="전기요금/kWh" value="350">
+  <div class="note">상기 이미지 및 내용은 실제 판매차량과 차이가 있을 수 있습니다.</div>
+
+  <div class="calc-card">
+    <div class="calc-head">전기차 전환 비용 계산기 ▲</div>
+    <div class="calc-body">
+      <div class="calc-intro">현재 차량 정보를 입력하고 BYD 전기차 전환 시 예상 유지비 절감액을 확인하세요.</div>
+
+      <div class="form-grid">
+        <div class="field">
+          <label for="cc">배기량 (cc)</label>
+          <input id="cc" type="number" placeholder="예) 2000">
+        </div>
+        <div class="field">
+          <label for="eff">연비 (km/L, 복합연비)</label>
+          <input id="eff" type="number" placeholder="예) 12">
+        </div>
+        <div class="field">
+          <label for="fuel">연료 단가 (원/L)</label>
+          <input id="fuel" type="number" placeholder="예) 1650">
+        </div>
+        <div class="field">
+          <label for="km">연간 주행거리 (km)</label>
+          <input id="km" type="number" placeholder="예) 20000">
+        </div>
+        <div class="field full">
+          <label for="bydModel">BYD 모델 선택</label>
+          <select id="bydModel">
+            <option value="DOLPHIN">BYD DOLPHIN</option>
+            <option value="ATTO 3">BYD ATTO 3</option>
+            <option value="SEAL">BYD SEAL</option>
+            <option value="SEALION 7">BYD SEALION 7</option>
+            <option value="SEALION 6">BYD SEALION 6</option>
+          </select>
+        </div>
+        <div class="field full">
+          <label>비교 기간</label>
+          <div class="periods">
+            <button type="button" class="period-btn" data-years="1">1년</button>
+            <button type="button" class="period-btn" data-years="3">3년</button>
+            <button type="button" class="period-btn active" data-years="5">5년</button>
+          </div>
+        </div>
+      </div>
+
+      <button class="calc-submit" onclick="calcCost()">유지비 절감액 확인</button>
+      <div class="calc-result" id="calcResult">입력 후 버튼을 누르면 예상 절감액이 표시됩니다.</div>
     </div>
-    <button onclick="calcCost()">유지비 절감액 확인</button>
-    <div class="result" id="calcResult"></div>
   </div>
 </section>
 
@@ -184,17 +240,24 @@ td:first-child{text-align:left;padding-left:10px}
 
 <script>
 const models = [
-  {name:"DOLPHIN", desc:"감각적인 디자인과 실용성을 겸비한 소형 해치백", img:"images/dolphin.png?v=user6"},
-  {name:"ATTO 3", desc:"일상과 비즈니스를 모두 만족시키는 전기 SUV", img:"images/atto3.png?v=user6"},
-  {name:"SEAL", desc:"퍼포먼스와 프리미엄 감성을 담은 전기 세단", img:"images/seal.png?v=user6"},
-  {name:"SEALION 7", desc:"도심형 전기 SUV의 새로운 기준", img:"images/sealion7.png?v=user6"},
-  {name:"SEALION 6", desc:"전기 주행과 장거리 효율을 함께 갖춘 PHEV SUV", img:"images/sealion6.png?v=user6"}
+  {name:"DOLPHIN", desc:"감각적인 디자인과 실용성을 겸비한 소형 해치백", img:"images/dolphin.png?v=final7"},
+  {name:"ATTO 3", desc:"일상과 비즈니스를 모두 만족시키는 전기 SUV", img:"images/atto3.png?v=final7"},
+  {name:"SEAL", desc:"퍼포먼스와 프리미엄 감성을 담은 전기 세단", img:"images/seal.png?v=final7"},
+  {name:"SEALION 7", desc:"도심형 전기 SUV의 새로운 기준", img:"images/sealion7.png?v=final7"},
+  {name:"SEALION 6", desc:"전기 주행과 장거리 효율을 함께 갖춘 PHEV SUV", img:"images/sealion6.png?v=final7"}
 ];
-
+const evKwhPer100km = {
+  "DOLPHIN": 15.9,
+  "ATTO 3": 16.0,
+  "SEAL": 14.7,
+  "SEALION 7": 19.0,
+  "SEALION 6": 18.0
+};
 const carImg = document.getElementById("carImg");
 const modelName = document.getElementById("modelName");
 const modelDesc = document.getElementById("modelDesc");
 const dots = document.getElementById("dots");
+let selectedYears = 5;
 
 function renderDots(active){
   dots.innerHTML = "";
@@ -204,29 +267,52 @@ function renderDots(active){
     dots.appendChild(d);
   });
 }
-
 function setModel(i){
   const m = models[i];
   carImg.src = m.img;
   carImg.alt = "BYD " + m.name;
   modelName.textContent = m.name;
   modelDesc.textContent = m.desc;
+  document.getElementById("bydModel").value = m.name;
   renderDots(i);
 }
-
 document.querySelectorAll("[data-model]").forEach(btn => btn.addEventListener("click", () => setModel(Number(btn.dataset.model))));
+document.querySelectorAll(".period-btn").forEach(btn => btn.addEventListener("click", () => {
+  document.querySelectorAll(".period-btn").forEach(b => b.classList.remove("active"));
+  btn.classList.add("active");
+  selectedYears = Number(btn.dataset.years);
+}));
 
-function calcCost(){
-  const km = Number(document.getElementById("km").value || 0);
-  const fuel = Number(document.getElementById("fuel").value || 0);
-  const eff = Number(document.getElementById("eff").value || 1);
-  const elec = Number(document.getElementById("elec").value || 0);
-  const hybrid = km / eff * fuel;
-  const ev = km / 5.5 * elec;
-  const save = Math.max(0, hybrid - ev);
-  document.getElementById("calcResult").textContent = "연간 예상 절감액 약 " + Math.round(save).toLocaleString() + "원";
+function getAnnualTax(cc){
+  if (!cc || cc <= 0) return 0;
+  let rate = 200;
+  if (cc <= 1000) rate = 80;
+  else if (cc <= 1600) rate = 140;
+  const base = cc * rate;
+  return Math.round(base * 1.3); // 자동차세 + 지방교육세 대략치
 }
 
+function calcCost(){
+  const cc = Number(document.getElementById("cc").value || 0);
+  const eff = Number(document.getElementById("eff").value || 0);
+  const fuel = Number(document.getElementById("fuel").value || 0);
+  const km = Number(document.getElementById("km").value || 0);
+  const model = document.getElementById("bydModel").value;
+  if (!eff || !fuel || !km) {
+    document.getElementById("calcResult").innerHTML = "배기량, 연비, 연료 단가, 연간 주행거리를 입력해 주세요.";
+    return;
+  }
+  const years = selectedYears;
+  const hybridFuelCost = (km / eff) * fuel * years;
+  const evEnergyCost = (km / 100) * evKwhPer100km[model] * 350 * years;
+  const taxSave = Math.max(0, (getAnnualTax(cc) - 130000) * years);
+  const consumableSave = 420000 * (years / 5);
+  const totalSave = Math.max(0, hybridFuelCost - evEnergyCost + taxSave + consumableSave);
+
+  document.getElementById("calcResult").innerHTML =
+    years + "년 기준 예상 절감액<b>약 " + Math.round(totalSave).toLocaleString() + "원</b>" +
+    "연료비 절감, 세금 차이, 소모품 비용 차이를 반영한 예상치입니다.";
+}
 setModel(0);
 </script>
 </body>
